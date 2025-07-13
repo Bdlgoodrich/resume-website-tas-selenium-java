@@ -4,35 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a783f074-63f5-4f79-bfe0-33881920ae10" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/allTests.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/desktopTests.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mobileTests.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Test_FAQ_Accordian.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Test_Page_Format.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Test_Projects_Carousel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="a783f074-63f5-4f79-bfe0-33881920ae10" name="Changes" comment="Added tests for FAQ accordion">
+      <change afterPath="$PROJECT_DIR$/test_Map.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Navbar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Navbar.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ResumePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ResumePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utilities.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/src/main/java/Navbar.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/src/main/java/ResumePage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/src/main/java/Utilities.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/src/test/java/Base_Test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/src/test/java/Test_Navbar.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/src/test/java/Test_PageFormat.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/target/classes/Navbar.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/target/classes/ResumePage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/target/classes/Utilities.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/target/test-classes/Base_Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/target/test-classes/Test_Navbar.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/target/test-classes/Test_PageFormat.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Base_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Base_Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Test_Navbar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test_Navbar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Test_PageFormat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Test_FAQ_Accordian.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test_FAQ_Dropdown.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Test_Page_Format.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test_Page_Format.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Test_Projects_Carousel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test_Projects_Carousel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +58,9 @@
     "TestNG.Test_Navbar.NavbarBecomesVisibleUponScroll.executor": "Run",
     "TestNG.Test_Navbar.NavbarShouldStartInvisible.executor": "Run",
     "TestNG.Test_Navbar.executor": "Run",
+    "TestNG.Test_Projects_Carousel.CarouselPagesShouldContainExpectedNumberOfProjects.executor": "Run",
+    "TestNG.Test_Projects_Carousel.CarouselShouldContainExpectedNumberOfProjects.executor": "Run",
+    "TestNG.Test_Projects_Carousel.executor": "Run",
     "git-widget-placeholder": "Bdlgoodrich-updates",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Andie/dev/resume-website-tas-selenium-java",
@@ -92,7 +75,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.Test_FAQ_Accordian.AllDropdownsShouldOpenAndCloseWithClick">
+  <component name="RunManager" selected="TestNG.Test_Projects_Carousel">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="resume-website-tas-selenium-java" />
       <method v="2">
@@ -106,10 +89,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test_FAQ_Accordian" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Test_FAQ_Dropdown" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="resume-website-tas" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Test_FAQ_Accordian" />
+      <option name="MAIN_CLASS_NAME" value="Test_FAQ_Dropdown" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -117,22 +100,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test_FAQ_Accordian.AllDropdownsShouldBeClosedUponPageLoad" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Test_FAQ_Dropdown.AllDropdownsShouldOpenAndCloseWithClick" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="resume-website-tas" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Test_FAQ_Accordian" />
-      <option name="METHOD_NAME" value="AllDropdownsShouldBeClosedUponPageLoad" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Test_FAQ_Accordian.AllDropdownsShouldOpenAndCloseWithClick" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="resume-website-tas" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Test_FAQ_Accordian" />
+      <option name="MAIN_CLASS_NAME" value="Test_FAQ_Dropdown" />
       <option name="METHOD_NAME" value="AllDropdownsShouldOpenAndCloseWithClick" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -141,11 +112,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test_FAQ_Accordian.OpenDropdownShouldCloseWhenAnotherDropdownOpens" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Test_Projects_Carousel" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="resume-website-tas" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Test_FAQ_Accordian" />
-      <option name="METHOD_NAME" value="OpenDropdownShouldCloseWhenAnotherDropdownOpens" />
+      <option name="MAIN_CLASS_NAME" value="Test_Projects_Carousel" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test_Projects_Carousel.CarouselPagesShouldContainExpectedNumberOfProjects" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="resume-website-tas" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Test_Projects_Carousel" />
+      <option name="METHOD_NAME" value="CarouselPagesShouldContainExpectedNumberOfProjects" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -153,11 +135,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test_Navbar" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Test_Projects_Carousel.CarouselShouldContainExpectedNumberOfProjects" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="resume-website-tas" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Test_Navbar" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="MAIN_CLASS_NAME" value="Test_Projects_Carousel" />
+      <option name="METHOD_NAME" value="CarouselShouldContainExpectedNumberOfProjects" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -166,11 +149,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.Test_FAQ_Accordian.AllDropdownsShouldOpenAndCloseWithClick" />
-        <item itemvalue="TestNG.Test_FAQ_Accordian" />
-        <item itemvalue="TestNG.Test_FAQ_Accordian.OpenDropdownShouldCloseWhenAnotherDropdownOpens" />
-        <item itemvalue="TestNG.Test_FAQ_Accordian.AllDropdownsShouldBeClosedUponPageLoad" />
-        <item itemvalue="TestNG.Test_Navbar" />
+        <item itemvalue="TestNG.Test_Projects_Carousel" />
+        <item itemvalue="TestNG.Test_Projects_Carousel.CarouselPagesShouldContainExpectedNumberOfProjects" />
+        <item itemvalue="TestNG.Test_Projects_Carousel.CarouselShouldContainExpectedNumberOfProjects" />
+        <item itemvalue="TestNG.Test_FAQ_Dropdown.AllDropdownsShouldOpenAndCloseWithClick" />
+        <item itemvalue="TestNG.Test_FAQ_Dropdown" />
       </list>
     </recent_temporary>
   </component>
@@ -190,6 +173,19 @@
       <option name="presentableId" value="Default" />
       <updated>1749677839939</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added tests for FAQ accordion">
+      <option name="closed" value="true" />
+      <created>1752386579102</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1752386579102</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added tests for FAQ accordion" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added tests for FAQ accordion" />
   </component>
 </project>

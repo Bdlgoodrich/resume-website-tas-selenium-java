@@ -5,7 +5,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class Test_FAQ_Accordian extends Base_Test {
+public class Test_FAQ_Dropdown extends Base_Test {
     public WebDriver driver;
 
     @BeforeMethod

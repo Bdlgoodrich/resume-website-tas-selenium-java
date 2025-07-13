@@ -26,18 +26,20 @@ public class Utilities {
         return Objects.requireNonNull(driver.getTitle()).contentEquals(title);
     }
 
-    public void scrollToElement(WebElement element) throws InterruptedException {
-        var js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].scrollIntoView(true);", element);
-        Thread.sleep(500);
-        waitForElementVisible(element);
-    }
-
+    //~~~~~Scrolls~~~~~
     public void scrollDown() {
         var js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollTo(0, 1000)");
     }
 
+    public void scrollToElement(WebElement element) throws InterruptedException {
+        var js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView(true);", element);
+        waitForElementToBeVisible(element);
+        waitForScrollToStop();
+    }
+
+    //~~~~~Positions~~~~~
     public double fetchCurrentPosition() {
         var js = (JavascriptExecutor) driver;
         String position = js.executeScript("return window.pageYOffset;").toString();
@@ -59,17 +61,26 @@ public class Utilities {
         else return Math.round(number / 100) * 100;
     }
 
+    //~~~~~Waits~~~~~
 
-    public void waitForElementVisible(WebElement element) {
+    public void waitForElementToBeVisible(WebElement element) {
         var wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 
-    public void waitForElementToBeClickable(WebElement element) {
-        var wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        wait.until(ExpectedConditions.elementToBeClickable(element));
+    //This method polls the browser's vertical scroll position every 200 milliseconds and compares it to the previous poll. It stops running when the positions are identical.
+    private void waitForScrollToStop() throws InterruptedException {
+        var js = (JavascriptExecutor) driver;
+        String startPosition;
+        String endPosition;
+        do {
+            startPosition = js.executeScript("return window.pageYOffset;").toString();
+            Thread.sleep(200);
+            endPosition = js.executeScript("return window.pageYOffset;").toString();
+        }while(!startPosition.contentEquals(endPosition));
     }
 
+    //~~~~~Broken Links~~~~~
     public String fetchAllBrokenLinks() throws URISyntaxException, IOException {
         return linksUnbroken(driver.findElements(By.tagName("a")));
     }

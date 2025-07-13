@@ -23,6 +23,16 @@ public class Base_Test {
         return driver;
     }
 
+    public WebDriver initializeHeadedDriver() {
+        System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\Google\\Chrome\\chromedriver.exe");
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--disable-popup-blocking");
+        options.addArguments("--disable-notifications");
+        WebDriver driver = new ChromeDriver(options);
+        driver.manage().window().maximize();
+        return driver;
+    }
+
     public String getScreenshot(String testCaseName) throws IOException {
         TakesScreenshot ts = (TakesScreenshot) driver;
         File source = ts.getScreenshotAs(OutputType.FILE);

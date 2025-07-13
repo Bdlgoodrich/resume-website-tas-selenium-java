@@ -30,7 +30,7 @@ public class Test_Page_Format extends Base_Test{
     }
 
     @Test
-    public void ShouldHaveNoBroken() throws URISyntaxException, IOException {
+        public void ShouldHaveNoBroken() throws URISyntaxException, IOException {
         var resumePage = new ResumePage(driver);
         String brokenLinks = resumePage.fetchAllBrokenLinks();
         Assert.assertEquals(brokenLinks, "No broken links.", "The following links are broken:" + brokenLinks);
