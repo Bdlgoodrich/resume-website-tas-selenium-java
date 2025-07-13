@@ -13,6 +13,13 @@ public class Test_Navbar extends Base_Test {
         resumePage.goToUrl();
     }
 
+    @AfterMethod
+    public void CloseDriver (){
+        driver.quit();
+    }
+
+
+
     @Test
     public void NavbarShouldStartInvisible() {
         var navbar = new Navbar(driver);
@@ -21,7 +28,7 @@ public class Test_Navbar extends Base_Test {
     }
 
     @Test
-    public void NavbarBecomesVisibleUponScroll() {
+    public void NavbarShouldBeVisibleUponScroll() {
         var navbar = new Navbar(driver);
         navbar.scrollDown();
         Assert.assertTrue(navbar.navbarIsVisible());
@@ -32,7 +39,7 @@ public class Test_Navbar extends Base_Test {
     }
 
     @Test (dataProvider="NavbarButtons")
-    public void NavbarButtonsShouldScrollToCorrespondingSection(String button) {
+    public void NavbarButtonsShouldScrollToCorrespondingSection(String button) throws InterruptedException {
         var navbar = new Navbar(driver);
         navbar.scrollDown();
         navbar.clickButtonByName(button);
@@ -44,11 +51,6 @@ public class Test_Navbar extends Base_Test {
         var navbar = new Navbar(driver);
         navbar.scrollDown();
         navbar.clickNavbarResumeLink();
-    }
-
-    @AfterMethod
-    public void CloseDriver (){
-        driver.close();
     }
 
 }

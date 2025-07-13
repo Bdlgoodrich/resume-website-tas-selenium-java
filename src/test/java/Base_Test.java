@@ -5,8 +5,6 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.testng.annotations.BeforeTest;
-
 import java.io.File;
 import java.io.IOException;
 
@@ -19,7 +17,7 @@ public class Base_Test {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--disable-popup-blocking");
         options.addArguments("--disable-notifications");
-//		options.addArguments("headless");
+		options.addArguments("headless");
         WebDriver driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         return driver;
